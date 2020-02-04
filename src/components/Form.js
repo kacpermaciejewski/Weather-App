@@ -37,6 +37,9 @@ setResult("")
 setCityName(inputValue);
 setInputValue("");
 }
+else{
+    alert("City name has to be longer than 2 characters")
+}
 }
 
 

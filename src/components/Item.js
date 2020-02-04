@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
 const rotate = keyframes`
@@ -66,7 +66,11 @@ const Img = styled.img`
 width: 100%;
 `;
 
-function Item({result}){
+const Error = styled.p`
+color:#11ccf2
+`;
+
+function Item({result, cityName}){
 
     if(result !== "" && result.cod === 200){
         let icon = `http://openweathermap.org/img/w/${result.weather[0].icon}.png`;
@@ -87,10 +91,13 @@ function Item({result}){
             </Wrapper>
         )
     }
-    else{
+    else if(result !=="" && result.cod !==200){
         return(
-            <React.Fragment></React.Fragment>
+            <Error>Sorry, we can't find this city: {cityName}</Error>
         )
+    }
+    else{return(
+        <React.Fragment></React.Fragment>)
     }
 }
 

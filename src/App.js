@@ -20,7 +20,7 @@ margin-top: 20px;
 function App() {
 
  const [inputValue, setInputValue] = useState("");
- const [cityName, setCityName] = useState("Warsaw")
+ const [cityName, setCityName] = useState("")
  const [result, setResult] = useState("")
  const [error, setError] = useState("")
 
@@ -45,7 +45,7 @@ error =>{
      <Header>Weather app</Header>
      <Subtitle>This is a simple weather app. Just enter the city name and get its weather information.</Subtitle>
      <Form inputValue={inputValue} setInputValue={setInputValue} cityName={cityName} setCityName={setCityName} setResult={setResult}></Form>
-     <Item result = {result}></Item>
+     <Item result = {result} cityName={cityName}></Item>
      {error.length >0 ?console.log(error) : ''}
     </div>
   );
