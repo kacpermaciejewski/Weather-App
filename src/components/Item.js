@@ -19,7 +19,7 @@ background-color: #F3F2F2;
 color: #11CCF2;
 margin-top: 10px;
 border-radius: 10px;
-animation: ${rotate} 2s linear forwards;
+animation: ${rotate} 1s linear forwards;
 display: flex;
 justify-content: space-between;
 align-items: center;
